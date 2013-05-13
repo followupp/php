@@ -12,21 +12,10 @@
 class Followupp
 {
 
-    private static $api_key = '';
-
-    public static function set_api_key ($apikey) {
-        self::$api_key = $apikey;
-    }
-
-
     public static function request($arguments = array())
     {
 
-        // determine endpoint
-        $endpoint = 'www.followupp.co/api/messages';
-
-        // build payload
-        $arguments['key'] = self::$api_key;
+        $endpoint = 'https://www.followupp.co/api/messages';
 
         // setup curl request
         $ch = curl_init();
